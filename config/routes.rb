@@ -3,7 +3,15 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'campsites#index'
+
+  resources :campsites
+  resources :activities
+
+
+  post '/set_children_checkin' => 'childrens#set_children_checkin', as: :checkin_children
+
+  post '/remove_children_checkin' => 'childrens#remove_children_checkin', as: :remove_checkin_children
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -10,6 +10,19 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
+ *= require commoncss/font-awesome
+ *= require commoncss/simple-line-icons
+ *= require commoncss/bootstrap
+ *= require commoncss/bootstrap-switch
+ *= require commoncss/components-md
+ *= require commoncss/plugins-md
+ *= require commoncss/layout
+ *= require commoncss/default
+ *= require commoncss/custom
+ *= require commoncss/toastr.min.css
+
+
+*
  */

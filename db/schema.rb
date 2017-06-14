@@ -23,13 +23,6 @@ ActiveRecord::Schema.define(version: 20170613094921) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "activity_children", force: :cascade do |t|
-    t.integer  "child_id"
-    t.integer  "activity_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "campsites", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -43,6 +36,13 @@ ActiveRecord::Schema.define(version: 20170613094921) do
     t.date     "date_of_birth"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "children_activities", force: :cascade do |t|
+    t.integer  "child_id"
+    t.integer  "activity_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "children_checks", force: :cascade do |t|

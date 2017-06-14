@@ -44,7 +44,7 @@
           <ul>
 
             <% @children.each do |child|  %>
-                <li class="mt-list-item" style="background-color:<%=child.color(@activity.id) %>;" id="child_list<%= child.id%>">
+                <li class="mt-list-item" style="background-color:<%=child_color(child, @activity.id) %>;" id="child_list<%= child.id%>">
                   <div class="list-icon-container done">
                     <i class="icon-check"></i>
                   </div>

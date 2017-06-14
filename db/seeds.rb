@@ -29,20 +29,20 @@ child_mason = Child.where(first_name: "Mason", last_name: "Oliver", gender: "mal
 child_sophia = Child.where(first_name: "Sophia", last_name: "Aiden", gender: "female").first_or_create(first_name: "Sophia", last_name: "Aiden", gender: "female", date_of_birth: "09-12-2003")
 child_isabella = Child.where(first_name: "Isabella", last_name: "Lily", gender: "female").first_or_create(first_name: "Isabella", last_name: "Lily", gender: "female", date_of_birth: "09-12-1999")
 
-#activity_children
+#children_activities
 # activity_a
-activity_a.activity_children << ActivityChild.new(:child_id => child_john.id) if activity_a.activity_children.find_by_child_id(child_john.id).blank?
-activity_a.activity_children << ActivityChild.new(:child_id => child_mason.id) if activity_a.activity_children.find_by_child_id(child_mason.id).blank?
-activity_a.activity_children << ActivityChild.new(:child_id => child_isabella.id) if activity_a.activity_children.find_by_child_id(child_isabella.id).blank?
+activity_a.children_activities << ChildrenActivity.new(:child_id => child_john.id) if activity_a.children_activities.find_by_child_id(child_john.id).blank?
+activity_a.children_activities << ChildrenActivity.new(:child_id => child_mason.id) if activity_a.children_activities.find_by_child_id(child_mason.id).blank?
+activity_a.children_activities << ChildrenActivity.new(:child_id => child_isabella.id) if activity_a.children_activities.find_by_child_id(child_isabella.id).blank?
 
 # activity_b
-activity_b.activity_children << ActivityChild.new(:child_id => child_john.id) if activity_b.activity_children.find_by_child_id(child_john.id).blank?
-activity_b.activity_children << ActivityChild.new(:child_id => child_jackson.id) if activity_b.activity_children.find_by_child_id(child_jackson.id).blank?
-activity_b.activity_children << ActivityChild.new(:child_id => child_mason.id) if activity_b.activity_children.find_by_child_id(child_mason.id).blank?
-activity_b.activity_children << ActivityChild.new(:child_id => child_sophia.id) if activity_b.activity_children.find_by_child_id(child_sophia.id).blank?
-activity_b.activity_children << ActivityChild.new(:child_id => child_isabella.id) if activity_b.activity_children.find_by_child_id(child_isabella.id).blank?
+activity_b.children_activities << ChildrenActivity.new(:child_id => child_john.id) if activity_b.children_activities.find_by_child_id(child_john.id).blank?
+activity_b.children_activities << ChildrenActivity.new(:child_id => child_jackson.id) if activity_b.children_activities.find_by_child_id(child_jackson.id).blank?
+activity_b.children_activities << ChildrenActivity.new(:child_id => child_mason.id) if activity_b.children_activities.find_by_child_id(child_mason.id).blank?
+activity_b.children_activities << ChildrenActivity.new(:child_id => child_sophia.id) if activity_b.children_activities.find_by_child_id(child_sophia.id).blank?
+activity_b.children_activities << ChildrenActivity.new(:child_id => child_isabella.id) if activity_b.children_activities.find_by_child_id(child_isabella.id).blank?
 
 # activity_d
-activity_d.activity_children << ActivityChild.new(:child_id => child_jackson.id) if activity_d.activity_children.find_by_child_id(child_jackson.id).blank?
-activity_d.activity_children << ActivityChild.new(:child_id => child_mason.id) if activity_d.activity_children.find_by_child_id(child_mason.id).blank?
-activity_d.activity_children << ActivityChild.new(:child_id => child_sophia.id) if activity_d.activity_children.find_by_child_id(child_sophia.id).blank?
+activity_d.children_activities << ChildrenActivity.new(:child_id => child_jackson.id) if activity_d.children_activities.find_by_child_id(child_jackson.id).blank?
+activity_d.children_activities << ChildrenActivity.new(:child_id => child_mason.id) if activity_d.children_activities.find_by_child_id(child_mason.id).blank?
+activity_d.children_activities << ChildrenActivity.new(:child_id => child_sophia.id) if activity_d.children_activities.find_by_child_id(child_sophia.id).blank?

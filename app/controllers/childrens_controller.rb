@@ -1,5 +1,6 @@
 class ChildrensController < ApplicationController
 
+  before_filter :load_activity
 
   def set_children_checkin
    @child = Child.find(params[:child_id])
@@ -19,6 +20,12 @@ class ChildrensController < ApplicationController
     @child_checkout = ChildrenCheck.where(child_id: params[:child_id] , activity_id: params[:activity_id] ,category: "out").first
     @child_checkin.destroy
     @child_checkout.destroy
+  end
+
+  private
+
+  def load_activity
+    @activity = Activity.find_by_id(params[:activity_id])
   end
 
 

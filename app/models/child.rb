@@ -8,12 +8,11 @@ class Child < ActiveRecord::Base
 		"#{first_name} #{last_name}"
 	end
 
-
-
-	def color
-		if self.children_checks.check_out.present?
+	def color(activity_id)
+		checks = self.children_checks
+		if checks.check_out.where(activity_id: activity_id).present?
 			return "green"
-		elsif 	self.children_checks.check_in.present?
+		elsif 	checks.check_in.where(activity_id: activity_id).present?
 			return "blue"
 		else
 			return "red"

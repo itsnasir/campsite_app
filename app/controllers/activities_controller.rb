@@ -10,6 +10,11 @@ class ActivitiesController < ApplicationController
   # GET /attachments/1
   # GET /attachments/1.json
   def show
+    keyword = params[:keyword].to_s.downcase
+    @children = @activity.children
+    unless keyword.blank?
+      @children = @children.where("Lower(first_name) LIKE ? OR Lower(last_name) LIKE ?", "%#{keyword}%", "%#{keyword}%")
+    end
   end
 
   private

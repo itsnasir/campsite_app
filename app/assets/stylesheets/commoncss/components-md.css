@@ -15962,9 +15962,10 @@ body.stop-scrolling {
       border-color: #e7ecf1;
       padding: 15px 0; }
       .mt-element-list .list-simple.mt-list-container ul > .mt-list-item:first-child {
-        padding-top: 0; }
+        /*padding-top: 0; */
+      }
       .mt-element-list .list-simple.mt-list-container ul > .mt-list-item:last-child {
-        padding-bottom: 0;
+        /*padding-bottom: 0;*/
         border: none; }
       .mt-element-list .list-simple.mt-list-container ul > .mt-list-item > .list-icon-container {
         font-size: 14px;

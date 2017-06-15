@@ -8,7 +8,7 @@
     <h3 class="uppercase">
 
       <%if child.can_undo?(activity) %>
-        <%= link_to child.name, children_check_path(child.check_out_obj(activity), child_id: child.id , activity_id: activity.id),:method=> :delete, data: {confirm: 'undo check in/out?'} ,:remote => true %>
+        <%= link_to child.name, children_check_path(child.check_out_obj(activity), child_id: child.id , activity_id: activity.id),:method=> :delete, data: {confirm: 'Undo check in/out?'} ,:remote => true %>
       <% else %>
         <%= link_to child.name, children_checks_path(child_id: child.id , activity_id: activity.id, :category => "#{child.next_state(activity)}"),  :method=> :post,:remote => true, :class => "font-white" %>
       <% end %>

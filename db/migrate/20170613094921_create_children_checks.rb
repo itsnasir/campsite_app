@@ -8,5 +8,9 @@ class CreateChildrenChecks < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index :children_checks, :child_id
+    add_index :children_checks, :activity_id
+    add_index :children_checks, :category
   end
 end

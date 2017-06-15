@@ -1,0 +1,2 @@
+$("#<%= dom_id @child %>").replaceWith("<%= escape_javascript(render :partial => 'activities/child_activity', :locals => {:child => @child, :activity => @activity}) %>");
+$('.total_checked_in_childrens').html("<%= @activity.checked_in_childs.length%>/<%= @activity.children.count%>   ")

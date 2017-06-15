@@ -1,15 +1,13 @@
 class CreateChildrenActivities < ActiveRecord::Migration
-  def up
+  def change
     create_table :children_activities do |t|
       t.integer :child_id
       t.integer :activity_id
 
       t.timestamps null: false
     end
-  end
 
-  def down
-  	drop_table :children_activities if table_exists? :children_activities
-  	drop_table :activity_children if table_exists? :activity_children
+    add_index :children_activities, :child_id
+    add_index :children_activities, :activity_id
   end
 end

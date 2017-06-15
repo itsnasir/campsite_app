@@ -44,19 +44,7 @@
           <ul>
 
             <% @children.each do |child|  %>
-                <li class="mt-list-item" style="background-color:<%=child_color(child, @activity.id) %>;" id="child_list<%= child.id%>">
-                  <div class="list-icon-container done">
-                    <i class="icon-check"></i>
-                  </div>
-                  <!--<div class="list-datetime">  </div>-->
-                  <div class="list-item-content">
-                    <h3 class="uppercase">
-                      <%= link_to child.name, checkin_children_path(child_id: child.id , activity_id: @activity.id),  :method=> :post,:remote => true, :class => "font-white" %>
-
-                      <%= link_to 'undo', remove_checkin_children_path(child_id: child.id , activity_id: @activity.id),:method=> :post, data: {confirm: 'undo check in/out?'} , class:"hidden" ,:remote => true, id:"undo_link#{child.id}" %>
-                    </h3>
-                  </div>
-                </li>
+                <%= render "child_activity", :child => child, :activity => @activity %>                
             <% end %>
 
           </ul>

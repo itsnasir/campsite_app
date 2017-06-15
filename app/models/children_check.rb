@@ -8,7 +8,7 @@ class ChildrenCheck < ActiveRecord::Base
 	belongs_to :activity
 
   scope :check_in, -> { where(category: CATEGORY_IN) }
-  scope :check_out, -> { where(category: CATEGORY_OUT) }
+  scope :check_out, -> { where(category: CATEGORY_OUT) }  
 
 
 end

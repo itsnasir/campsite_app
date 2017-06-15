@@ -7,11 +7,7 @@ Rails.application.routes.draw do
 
   resources :campsites
   resources :activities
-
-
-  post '/set_children_checkin' => 'childrens#set_children_checkin', as: :checkin_children
-
-  post '/remove_children_checkin' => 'childrens#remove_children_checkin', as: :remove_checkin_children
+  resources :children_checks
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
